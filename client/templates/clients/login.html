@@ -1,0 +1,26 @@
+<template name="loginClient">
+    <div id="loginModal" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" class="close">×</button>
+            <h4 class="modal-title">Iniciar sesión</h4>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <input type="text" placeholder="Email" name="email" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Contraseña" name="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <input id="login-button" type="submit" value="Registrar" class="input-xlarge btn btn-success">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+</template>

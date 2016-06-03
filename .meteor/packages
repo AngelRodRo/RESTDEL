@@ -24,3 +24,6 @@ kadira:blaze-layout
 accounts-ui
 accounts-password
 aldeed:collection2
+twbs:bootstrap
+chrismbeckett:toastr
+peppelg:bootstrap-3-modal
