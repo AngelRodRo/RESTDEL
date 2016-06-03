@@ -1,5 +1,8 @@
 Meteor.methods({
-    'crearRestaurant'(){
-        
+    'createRestaurant'(){
+
+    },
+    'searchRestaurant'(){
+
     }
 })
