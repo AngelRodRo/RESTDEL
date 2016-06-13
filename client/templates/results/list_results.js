@@ -4,10 +4,13 @@ Template.listResults.onCreated(function () {
         name = FlowRouter.getQueryParam('name');
 
     self.autorun(function () {
-        self.suscribe('results',type,name);
+        self.subscribe('results',type,name);
     })
 })
 
-Template.listResults.helpers({
 
+Template.listResults.helpers({
+    results(){
+        return Restaurants.find();
+    }
 })

@@ -7,7 +7,8 @@ Schema.Restaurants = new SimpleSchema({
         type:String
     },
     slug:{
-        type: String
+        type: String,
+        optional:true
     },
     address:{
         type: String
@@ -16,24 +17,30 @@ Schema.Restaurants = new SimpleSchema({
         type: String
     } ,
     celphone:{
-        type: String
+        type: String,
+        optional:true
     },
     social:{
-        type:[String]
+        type:[String],
+        optional:true
     },
     ruc: {
-        type: String
+        type: String,
+        optional:true
     },
     dishes:{
-        type: [Object]
+        type: [Object],
+        optional:true
     },
-    owner:
+    owner_id:
     {
-        type: Object
+        type: String
     },
     created_at:{
-        type:Date
+        type:Date,
+        optional: true
     }
 });
+
 
 Restaurants.attachSchema(Schema.Restaurants);

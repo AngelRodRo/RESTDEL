@@ -1,13 +1,12 @@
 Meteor.methods({
-    'createClient'(data){
-
+    'createUsers'(data){
         // check(data,{
         //     email:String,
         //     password:String,
         //     profile:Object
         // });
 
-        data.profile.type = "Client";
+        data.profile.type="User";
 
         Accounts.createUser(data);
     }
