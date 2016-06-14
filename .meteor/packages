@@ -27,3 +27,6 @@ twbs:bootstrap
 chrismbeckett:toastr
 peppelg:bootstrap-3-modal
 sach:flow-db-admin
+session
+check
+todda00:friendly-slugs

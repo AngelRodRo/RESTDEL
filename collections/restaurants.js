@@ -10,8 +10,18 @@ Schema.Restaurants = new SimpleSchema({
         type: String,
         optional:true
     },
+    description:{
+        type:String,
+        optional:true
+    },
     address:{
         type: String
+    },
+    type:{
+        type:String
+    },
+    image:{
+        type:String
     },
     phone:{
         type: String
@@ -42,5 +52,5 @@ Schema.Restaurants = new SimpleSchema({
     }
 });
 
-
+Restaurants.friendlySlugs('title');
 Restaurants.attachSchema(Schema.Restaurants);
