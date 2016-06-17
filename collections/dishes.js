@@ -3,6 +3,9 @@ Dishes = new Mongo.Collection('dishes');
 var Schema = {}
 
 Schema.Dishes = new SimpleSchema({
+    image:{
+        type:String
+    },
     name: {
         type: String
     },
@@ -12,6 +15,9 @@ Schema.Dishes = new SimpleSchema({
     price:{
         type: Number
     },
+    restaurant_id:{
+        type:String
+    }
     score:{
         type: Number
     },
