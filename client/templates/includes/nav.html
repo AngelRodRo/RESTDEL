@@ -1,15 +1,15 @@
 <template name="navigation">
     <nav class="navbar navbar-default navbar-inverse">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" style="margin-left:0px; margin-right:0px; text-align:right;">
+
             {{#if isLogged  }}
-                <span style="color:white;"> </span><span style="color:white;">{{ name }} </span>
+                <span style="color:white; font-weight:bold;">{{ name }}</span>
                 <button href="/logout" class="btn btn-primary navbar-btn logout-btn">Cerrar sesión</button>
             {{else}}
                 <button href="#" class="btn btn-primary login-btn">Iniciar sesión</button>
                 <a href="/registro" class="btn btn-primary">Registro</a>
             {{/if}}
-
             <p class="navbar-text navbar-right"><a href="#"> <i class="glyphicon glyphicon-shopping-cart"></i> {{nroOrders}}</a></p>
         </div>
       </div>
