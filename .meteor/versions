@@ -26,12 +26,8 @@ caching-html-compiler@1.0.6
 callback-hook@1.0.9
 check@1.2.3
 chrismbeckett:toastr@2.1.2_1
-<<<<<<< HEAD
-coffeescript@1.0.17
 dburles:google-maps@1.1.5
-=======
 coffeescript@1.1.2_1
->>>>>>> ad34b2f913e1724ec0e3d4c3f7402a779e2c48fe
 ddp@1.2.5
 ddp-client@1.2.8_1
 ddp-common@1.2.6

@@ -56,6 +56,9 @@ Schema.Orders = new SimpleSchema({
     longitude:{
         type:Number,
         optional:true
+    },
+    mandatedId:{
+        type:String
     }
 })
 

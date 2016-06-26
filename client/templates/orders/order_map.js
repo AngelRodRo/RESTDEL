@@ -8,6 +8,14 @@ Meteor.startup(function () {
 
 Template.orderMap.onCreated(function () {
 
+    Orders.find({isCompleted:false}).observe({
+        changed:function (doc) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(doc.latitude,doc.longitude),
+                map:GoogleMaps.maps.orderMap.instance
+            })
+        }
+    })
 
     GoogleMaps.ready('orderMap',function (map) {
         console.log("Ready");
