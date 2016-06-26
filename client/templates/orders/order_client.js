@@ -7,9 +7,17 @@ Template.listOrdersClient.onCreated(function () {
 
 Template.listOrdersClient.helpers({
     orderDishes(){
+        debugger;
         return Orders.find({isCompleted:false}).fetch()[0].dishes;
     },
     subtotal(){
         return this.price * this.quantity;
+    }
+})
+
+
+Template.listOrdersClient.events({
+    'click .make-order'(event,template){
+        Modal.show('waiting')
     }
 })

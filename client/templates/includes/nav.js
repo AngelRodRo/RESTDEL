@@ -11,7 +11,7 @@ Template.navigation.onCreated(function () {
 
     let self = this;
     self.autorun(function () {
-        Meteor.subscribe('orders',Meteor.userId())
+        self.subscribe('orders',Meteor.userId())
     })
 })
 
