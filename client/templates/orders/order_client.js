@@ -27,6 +27,6 @@ Template.listOrdersClient.helpers({
 
 Template.listOrdersClient.events({
     'click .make-order'(event,template){
-        Modal.show('waiting')
+        Modal.show('orderDetails')
     }
 })

@@ -41,6 +41,23 @@ Schema.Orders = new SimpleSchema({
     'user.name':{
         type:String
     },
+    'user.address':{
+        type:String
+    },
+    'user.position':{
+        type: Object
+    },
+    'user.phone':{
+        type:String
+    },
+    'user.position.latitude':{
+        type:Number,
+        decimal:true
+    },
+    'user.position.longitude':{
+        type:Number,
+        decimal:true
+    },
     isAble:{
         type:Boolean,
         optional:true
