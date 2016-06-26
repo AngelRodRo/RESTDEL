@@ -15,9 +15,9 @@ Schema.Dishes = new SimpleSchema({
     price:{
         type: Number
     },
-    restaurant_id:{
+    restaurantId:{
         type:String
-    }
+    },
     score:{
         type: Number
     },

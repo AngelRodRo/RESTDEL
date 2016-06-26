@@ -1,8 +1,8 @@
 Template.listDishes.onCreated(function () {
     let self = this;
     self.autorun(function () {
-        self.subscribe('dishesxrestaurant',FlowRouter.getParams('restaurant'))
-    })
+        self.subscribe('dishesxrestaurant',FlowRouter.getParam('restaurantId'))
+    });
 })
 
 Template.listDishes.helpers({
