@@ -10,9 +10,8 @@ Meteor.publish('results',function (type,name) {
 
 })
 
-Meteor.publish('dishesxrestaurant',function (name) {
-    check(name,String)
+Meteor.publish('dishesxrestaurant',function (id) {
+    check(id,String)
 
-    let id =  Restaurants.findOne({slug:name})._id;
-    return Dishes.find({restaurant_id:id});
+    return Dishes.find({restaurantId:id});
 })

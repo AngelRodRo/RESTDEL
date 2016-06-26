@@ -7,6 +7,14 @@ Template.navigation.events({
     }
 })
 
+Template.navigation.onCreated(function () {
+
+    let self = this;
+    self.autorun(function () {
+        self.subscribe('orders',Meteor.userId())
+    })
+})
+
 Template.navigation.helpers({
     isLogged(){
         let state = Meteor.userId()!==null? true:false;
@@ -14,5 +22,8 @@ Template.navigation.helpers({
     },
     name(){
         return Meteor.user().profile.name + " " + Meteor.user().profile.lastname
-     }
+    },
+    nroOrders(){
+        return Orders.find({isCompleted:false}).fetch()[0].dishes.length;
+    }
 })

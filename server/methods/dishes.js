@@ -1,5 +1,5 @@
 Meteor.methods({
     'createDish'(data){
-
+        
     }
 })

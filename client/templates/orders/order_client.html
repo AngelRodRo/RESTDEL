@@ -1,0 +1,58 @@
+<template name="listOrdersClient">
+
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="text-align:center">
+                        Foto
+                    </th>
+                    <th style="text-align:center">
+                        Nombre
+                    </th>
+                    <th style="text-align:center">
+                        Cantidad
+                    </th>
+                    <th style="text-align:center">
+                        Precio
+                    </th>
+                    <th style="text-align:center">
+                        Subtotal
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orderDishes}}
+                <tr>
+                    <td style="text-align:center">
+                        <img src="" alt="" />
+                    </td>
+                    <td style="text-align:center">
+                        <h2>
+                            {{this.name}}
+                        </h2>
+                    </td >
+                    <td style="text-align:center">
+                        <h2 class="quantity">
+                            {{this.quantity}} u
+                        </h2>
+                    </td>
+                    <td style="text-align:center">
+                        <h2 class="price">
+                            S/. {{this.price}}
+                        </h2>
+                    </td>
+                    <td style="text-align:center">
+                        <h2>
+                            S/. {{subtotal}}
+                        </h2>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div class="">
+            <a class="btn btn-primary make-order" href="#">Realizar el pedido</a>
+        </div>
+    </div>
+</template>

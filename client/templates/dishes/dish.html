@@ -1,9 +1,9 @@
 <template name="dish">
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-4">
             <img src="" alt="" />
         </div>
-        <div class="col-lg-9">
+        <div class="col-lg-4">
             <p class="name">
                 {{this.name}}
             </p>
@@ -16,6 +16,12 @@
             <p class="score">
                 {{this.score}}
             </p>
+        </div>
+        <div class="col-lg-2">
+            <input class="form-control" type="number" name="quantity" value="">
+        </div>
+        <div class="col-lg-2">
+            <button  type="button" data-id="{{id}}" class="btn btn-primary make-order"  name="button">Añadir a la orden</button>
         </div>
     </div>
 </template>
