@@ -1,6 +1,7 @@
 <template name="listOrdersClient">
 
     <div class="container">
+        <h1>Mi orden</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -49,6 +50,18 @@
                     </td>
                 </tr>
                 {{/each}}
+                <tr>
+                    <td colspan="4">
+                        <h2>
+                            Total
+                        </h2>
+                    </td>
+                    <td style="text-align:center">
+                        <h2 >
+                            S/. {{total}}
+                        </h2>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <div class="">

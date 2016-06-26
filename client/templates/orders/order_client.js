@@ -12,6 +12,15 @@ Template.listOrdersClient.helpers({
     },
     subtotal(){
         return this.price * this.quantity;
+    },
+    total(){
+        let dishes = Orders.find({isCompleted:false}).fetch()[0].dishes
+        let sum = 0;
+        dishes.forEach(function (dish) {
+            sum=+dish.quantity*dish.price
+        })
+        return sum;
+
     }
 })
 

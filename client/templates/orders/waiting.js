@@ -4,9 +4,10 @@ Template.waiting.onCreated(function () {
     debugger;
     Orders.find({isCompleted:false}).observe({
         changed:function (doc,oldDocument) {
-            if(doc.isCompleted) {
+            debugger;
+            if(!doc.isAble) {
                 Modal.hide('waiting')
-                FlowRouter.go('/misordenes/esperando')
+                FlowRouter.go('/miorden/esperando')
             }
         }
     })
