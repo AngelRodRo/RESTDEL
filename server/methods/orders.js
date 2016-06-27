@@ -56,5 +56,16 @@ Meteor.methods({
 
         return "";
 
+    },
+    'detailsOrder'(data){
+        check(data,Object);
+
+        Orders.update({'user.id':this.userId,isAble:true},{
+            $set:{
+                'user.address':data.address,
+                'user.phone':data.phone,
+                'user.position':data.position
+            }
+        })
     }
 })
