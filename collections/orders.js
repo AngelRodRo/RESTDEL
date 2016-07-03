@@ -42,21 +42,26 @@ Schema.Orders = new SimpleSchema({
         type:String
     },
     'user.address':{
-        type:String
+        type:String,
+        optional:true
     },
     'user.position':{
-        type: Object
+        type: Object,
+        optional:true
     },
     'user.phone':{
-        type:String
+        type:String,
+        optional:true
     },
     'user.position.latitude':{
         type:Number,
-        decimal:true
+        decimal:true,
+        optional:true
     },
     'user.position.longitude':{
         type:Number,
-        decimal:true
+        decimal:true,
+        optional:true
     },
     isAble:{
         type:Boolean,
@@ -75,7 +80,8 @@ Schema.Orders = new SimpleSchema({
         optional:true
     },
     mandatedId:{
-        type:String
+        type:String,
+        optional:true
     }
 })
 

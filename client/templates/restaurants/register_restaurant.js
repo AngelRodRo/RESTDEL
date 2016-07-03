@@ -8,6 +8,7 @@ Template.registerRestaurant.events({
                 dni: template.find("[name='idcard']").value,
                 name: template.find("[name='name']").value,
                 lastname: template.find("[name='lastname']").value,
+                type: "Restaurant"
             }
         };
 
@@ -22,8 +23,14 @@ Template.registerRestaurant.events({
             if(err) return toastr.error('Hubo un error al registrar intentelo nuevamente')
             restaurant.owner_id = Meteor.userId();
 
-            Meteor.call('createRestaurant',restaurant,function (err) {
+            Meteor.call('createRestaurant',restaurant,function (err,restaurant) {
+
+                Meteor.users.update({_id:Meteor.userId()},{$set:{
+                    'profile.restaurantId' : restaurant.id
+                }})
+
                 if(err) return toastr.error('Hubo un error al registrar intentelo nuevamente')
+                toastr.success('Se registro correctamente el restaurante');
                 return FlowRouter.go('/restaurantes')
             })
         })

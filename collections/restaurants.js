@@ -15,16 +15,20 @@ Schema.Restaurants = new SimpleSchema({
         optional:true
     },
     address:{
-        type: String
+        type: String,
+        optional:true
     },
     type:{
-        type:String
+        type:String,
+        optional:true
     },
     image:{
-        type:String
+        type:String,
+        optional:true
     },
     phone:{
-        type: String
+        type: String,
+        optional:true
     } ,
     celphone:{
         type: String,

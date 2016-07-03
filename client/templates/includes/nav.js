@@ -17,8 +17,10 @@ Template.navigation.onCreated(function () {
 
 Template.navigation.helpers({
     isLogged(){
-        let state = Meteor.userId()!==null? true:false;
-        return state;
+        if(Meteor.userId())
+            if(Meteor.user().profile.type!="Restaurant")
+                return true;
+        return false;
     },
     name(){
         return Meteor.user().profile.name + " " + Meteor.user().profile.lastname

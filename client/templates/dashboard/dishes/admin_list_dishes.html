@@ -1,0 +1,40 @@
+<template name="adminListDishes">
+
+    <a href="#" class="btn btn-primary agregar-plato">Nuevo</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Imagen
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Precio
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dishes}}
+                <tr>
+                    <td>
+                        {{this.image}}
+                    </td>
+                    <td>
+                        {{this.name}}
+                    </td>
+                    <td>
+                        {{this.type}}
+                    </td>
+                    <td>
+                        S/. {{this.price}}
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>

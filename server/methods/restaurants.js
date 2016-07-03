@@ -8,7 +8,10 @@ Meteor.methods({
         //     celphone:String,
         // })
 
-        Restaurants.insert(data);
+        let id = Restaurants.insert(data);
+        return {
+            id:id
+        }
     },
     'searchRestaurant'(){
 

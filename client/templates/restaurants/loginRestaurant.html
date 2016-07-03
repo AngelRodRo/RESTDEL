@@ -1,22 +1,17 @@
 <template name="loginRestaurants">
     <div class="home-restaurant">
-        <img src="/images/background-home-restaurant.jpg" alt="" />
-        <div class="login-page">
-          <div class="form">
-            <form class="register-form">
-              <input type="text" placeholder="name"/>
-              <input type="password" placeholder="password"/>
-              <input type="text" placeholder="email address"/>
-              <button>create</button>
-              <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-            <form class="login-form">
-              <input type="text" placeholder="Email"/>
-              <input type="password" placeholder="Contraseña"/>
-              <button>Iniciar sesión</button>
-              <p class="message">No estas registrado? <a href="/restaurantes/registro">Crear una nueva cuenta</a></p>
-            </form>
-          </div>
-        </div>
+        <!-- <img src="/images/background-home-restaurant.jpg" alt="" /> -->
+        <div class="loginmodal-container">
+					<h1>Inicio de sesión</h1><br>
+				  <form>
+					<input type="text" name="email" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Iniciar sesión">
+				  </form>
+
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
     </div>
 </template>

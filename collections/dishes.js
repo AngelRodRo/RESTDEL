@@ -4,7 +4,8 @@ var Schema = {}
 
 Schema.Dishes = new SimpleSchema({
     image:{
-        type:String
+        type:String,
+        optional:true
     },
     name: {
         type: String
@@ -19,10 +20,12 @@ Schema.Dishes = new SimpleSchema({
         type:String
     },
     score:{
-        type: Number
+        type: Number,
+        optional:true
     },
     created_at : {
-        type:Date
+        type:Date,
+        optional:true
     }
 })
 
