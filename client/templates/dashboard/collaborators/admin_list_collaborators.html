@@ -1,0 +1,55 @@
+<template name="adminListCollaborators">
+
+        <div class="container">
+            <a href="#" class="btn btn-primary agregar-colaborador">Nuevo</a>
+        </div>
+
+        <table class="table" style="margin-top:20px">
+            <thead>
+                <tr>
+                    <th>
+                        DNI
+                    </th>
+                    <th>
+                        Nombres y apellidos
+                    </th>
+                    <th>
+                        Telefonos
+                    </th>
+                    <th>
+                        Correo
+                    </th>
+                    <th>
+                        Direccion
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each collaborators}}
+                    <tr>
+                        <td>
+                            {{this.profile.dni}}
+                        </td>
+                        <td>
+                            {{this.profile.name}} {{this.profile.lastname}}
+                        </td>
+                        <td>
+                            {{this.celphone}}
+                        </td>
+                        <td>
+                            {{email}}
+                        </td>
+                        <td>
+                            {{this.address}}
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+</template>

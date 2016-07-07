@@ -191,14 +191,14 @@
             <div id="header-logo" class="logo-bg"><a href="/simpleadmin" title="DelightUI" class="logo-content-big">RestDel</a><a href="/simpleadmin" title="DelightUI" class="logo-content-small">RestDel</a><a id="close-sidebar" href="#" title="Close sidebar"><i class="glyph-icon icon-outdent"></i></a></div>
             <div class="scroll-sidebar">
               <ul id="sidebar-menu">
-              	<li><a href="#" title="Clientes"><i class="glyph-icon icon-linecons-tv"></i><span>Clientes</span></a></li>
-              	<li><a href="#" title="Administradores"><i class="glyph-icon icon-linecons-tv"></i><span>Administradores</span></a></li>
+                <li> <a href="/simpleadmin"><i class="glyph-icon icon-linecons-tv"></i> <span>Principal</span></a> </li>
+                <li class="header"><span>Componentes</span></li>
+                <li><a href="/simpleadmin/comidas" title="Platos de comida"><i class="glyph-icon icon-linecons-tv"></i><span>Platos de comida</span></a></li>
+                <li><a href="/simpleadmin/colaboradores" title="Platos de comida"><i class="glyph-icon icon-linecons-tv"></i><span>Colaboradores</span></a></li>
+                <li><a href="#" title="Historial de pedidos"><i class="glyph-icon icon-linecons-tv"></i><span>Historial de pedidos</span></a></li>
                 <li class="header"><span>Configuración</span></li>
                 <li><a href="/simpleadmin/configuracion" title="Datos generales"><i class="glyph-icon icon-linecons-tv"></i><span>Datos generales</span></a></li>
                 <li><a href="#" title="Perfil de administrador"><i class="glyph-icon icon-linecons-tv"></i><span>Perfil de administrador</span></a></li>
-                <li class="header"><span>Componentes</span></li>
-                <li><a href="#" title="Platos de comida"><i class="glyph-icon icon-linecons-tv"></i><span>Platos de comida</span></a></li>
-                <li><a href="#" title="Historial de pedidos"><i class="glyph-icon icon-linecons-tv"></i><span>Historial de pedidos</span></a></li>
                 <!-- <li><a href="javascript:void(0);" title="Elements"><i class="glyph-icon icon-linecons-diamond"></i><span>Elements</span></a>
                   <div class="sidebar-submenu">
                     <ul>
@@ -362,7 +362,7 @@
               <div id="page-content">
                 <div id="page-header">
                   <div id="header-nav-left"><a id="logout-btn" href="lockscreen-3.html" title="Lockscreen page example" class="header-btn"><i class="glyph-icon icon-linecons-lock"></i></a>
-                    <div class="user-account-btn dropdown"><a href="#" title="My Account" data-toggle="dropdown" class="user-profile clearfix"><img width="28" src="/admin_assets/image-resources/gravatar.jpg" alt="Profile image"><span>Michael Lee</span><i class="glyph-icon icon-angle-down"></i></a>
+                    <div class="user-account-btn dropdown"><a href="#" title="My Account" data-toggle="dropdown" class="user-profile clearfix"><img width="28" src="/admin_assets/image-resources/gravatar.jpg" alt="Profile image"><span>{{currentUser}}</span><i class="glyph-icon icon-angle-down"></i></a>
                       <div class="dropdown-menu float-right">
                         <div class="box-sm">
                           <div class="login-box clearfix">
@@ -384,7 +384,7 @@
                 </div>
 
                 <div id="page-title">
-                    <h2>PANEL DE ADMINISTRACIÓN</h2>
+                    <h2>PANEL DE ADMINISTRACIÓN > {{restaurant}} </h2>
                 </div>
                 {{> Template.dynamic template=content}}
                 </div>

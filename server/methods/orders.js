@@ -10,48 +10,50 @@ formatDate = function (date) {
 Meteor.methods({
     'addToOrder'(data){
         check(data,Object);
-
         if(this.userId){
-            let _dish = Dishes.find({_id:new Mongo.ObjectID(data.dishId)}).fetch()[0]
-            let dish = {
-                id: data.dishId,
-                name: _dish.name,
-                quantity: data.quantity,
-                price: _dish.price
-            }
+            if(Meteor.user().profile.type!="Restaurant"){
+                let _dish = Dishes.findOne({_id:data.dishId});
+                let dish = {
+                    id: data.dishId,
+                    name: _dish.name,
+                    quantity: data.quantity,
+                    price: _dish.price
+                }
 
-            let restaurant = {
-                id: data.restaurantId,
-                name: Restaurants.find({_id: new Mongo.ObjectID(data.restaurantId)}).fetch()[0].title
-            }
+                let restaurant = {
+                    id: data.restaurantId,
+                    name: Restaurants.findOne({_id: data.restaurantId}).title
+                }
 
-            let user = {}
+                let user = {}
 
-            user.name = Meteor.users.find({_id:this.userId}).fetch()[0].profile.name;
-            user.id = this.userId;
-            let code = user.name.substring(0,3) +"-"+ formatDate(new Date()) + "-" + data.dishId.substring(0,4);
-            // clear();
-            let order = {
-                code:code,
-                isCompleted:false,
-                isAble:true,
-                dishes:[dish],
-                restaurant: restaurant,
-                user: user
-            }
-            // console.log(order);
-            let ordersQuantity = Orders.find({'user.id':this.userId,isAble:true}).count();
-            if(ordersQuantity==1)
-                return Orders.update({'user.id':this.userId,isAble:true},{$set:{
+                user.name = Meteor.users.findOne({_id:this.userId}).profile.name;
+                user.id = this.userId;
+                let code = user.name.substring(0,3) +"-"+ formatDate(new Date()) + "-" + data.dishId.substring(0,4);
+                // clear();
+                let order = {
                     code:code,
                     isCompleted:false,
                     isAble:true,
-                    "$push": {
-                        "dishes": dish
-                    },
-                    user:user
-                }});
-            Orders.insert(order)
+                    dishes:[dish],
+                    restaurant: restaurant,
+                    user: user
+                }
+                // console.log(order);
+                let ordersQuantity = Orders.find({'user.id':this.userId,isAble:true}).count();
+                if(ordersQuantity==1)
+                    return Orders.update({'user.id':this.userId,isAble:true},{$set:{
+                        code:code,
+                        isCompleted:false,
+                        isAble:true,
+                        "$push": {
+                            "dishes": dish
+                        },
+                        user:user
+                    }});
+                return Orders.insert(order)
+            }
+
         }
 
         return "";

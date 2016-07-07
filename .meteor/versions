@@ -12,6 +12,7 @@ aldeed:simple-schema@1.5.3
 aldeed:tabular@1.4.2
 aldeed:template-extension@3.4.3
 allow-deny@1.0.5
+autopublish@1.0.7
 autoupdate@1.2.10
 babel-compiler@6.8.3
 babel-runtime@0.1.9_1
@@ -26,8 +27,8 @@ caching-html-compiler@1.0.6
 callback-hook@1.0.9
 check@1.2.3
 chrismbeckett:toastr@2.1.2_1
-dburles:google-maps@1.1.5
 coffeescript@1.1.2_1
+dburles:google-maps@1.1.5
 ddp@1.2.5
 ddp-client@1.2.8_1
 ddp-common@1.2.6
