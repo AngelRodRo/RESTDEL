@@ -1,26 +1,26 @@
 <template name="dish">
-    <div class="row">
-        <div class="col-lg-4">
-            <img src="" alt="" />
+    <div class="row" style="margin-right: 20%; margin-left: 20%; border: 2px solid black; margin-top: 30px;">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align:center;">
+            <img class="thumbnail" src="http://i.blogs.es/fcf53d/1e863b53e/450_1000.jpg" alt="" height="150" width="300" style="margin-bottom: 0px;"/>
         </div>
-        <div class="col-lg-4">
-            <p class="name">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align: center; padding-top: 3%; padding-right: 5%; padding-left: 5%;">
+            <h4 class="name">
                 {{this.name}}
-            </p>
+            </h4>
             <p class="type">
                 {{this.type}}
             </p>
             <p class="price">
                 S/. {{this.price}}
             </p>
-            <p class="score">
-                {{this.score}}
-            </p>
+            <p class="score"><i class="glyphicon glyphicon-star"></i> <span>{{this.score}}</span></p>
+            <input class="form-control" type="number" name="quantity" value="" style="text-align:center;">
         </div>
-        <div class="col-lg-2">
-            <input class="form-control" type="number" name="quantity" value="">
+        
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" style="text-align:center; padding-top: 7%;">
+            <button  type="button" data-id="{{id}}" class="btn btn-primary make-order"  name="button">Añadir a la orden</button>
         </div>
-        <div class="col-lg-2">
+        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align:center;">
             <button  type="button" data-id="{{id}}" class="btn btn-primary make-order"  name="button">Añadir a la orden</button>
         </div>
     </div>

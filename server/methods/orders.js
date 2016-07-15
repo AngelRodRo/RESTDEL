@@ -12,7 +12,9 @@ Meteor.methods({
         check(data,Object);
         if(this.userId){
             if(Meteor.user().profile.type!="Restaurant"){
+                console.log(data.dishId);
                 let _dish = Dishes.findOne({_id:data.dishId});
+                console.log(_dish);
                 let dish = {
                     id: data.dishId,
                     name: _dish.name,

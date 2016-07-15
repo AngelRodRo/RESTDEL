@@ -1,21 +1,36 @@
 <template name="result">
-	<article class="search-result row">
-		<div class="col-xs-12 col-sm-12 col-md-3">
-			<a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum" /></a>
+	<article class="search-result row" style="margin-right: 20%; margin-left: 20%; border: 2px solid black; margin-top: 30px;">
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align:center;">
+			<a href="#" title="Lorem ipsum" class="thumbnail" style="margin-bottom: 0px;"><img src="https://apariciotratamientos.files.wordpress.com/2015/01/398881_eda_restoran_cvety_xlopya_moloko_kruassan_nutella__1680x1050_www-gdefon-ru.jpg" height="150" width="300" alt="Lorem ipsum"/></a>
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-2">
-			<ul class="meta-search">
-				<li><i class="glyphicon glyphicon-calendar"></i> <span>02/15/2014</span></li>
-				<li><i class="glyphicon glyphicon-time"></i> <span>{{this.phone}}</span></li>
-				<li><i class="glyphicon glyphicon-tags"></i> <span>{{this.type}}</span></li>
-			</ul>
+
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="text-align:center; padding-top: 4%;">
+			<div class="row" style="margin-right: 0px; margin-left: 0px;">
+				<div class="col-lg-12 hidden-md col-sm-12 hidden-xs" style="padding-left: 0px; padding-right: 0px;">
+					<h2><a href="#" title="" style="text-decoration: none;">{{this.title}}</a></h2>	
+				</div>
+				<div class="hidden-lg col-md-12 hidden-sm col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+					<h3><a href="#" title="" style="text-decoration: none;">{{this.title}}</a></h3>	
+				</div>
+			</div>
+			<div class="row" style="margin-right: 0px; margin-left: 0px;">
+				<p style="font-size: 15px;">{{this.description}}</p>
+			</div>
+			<div class="row" style="margin-right: 0px; margin-left: 0px;">
+				
+				<p><i class="glyphicon glyphicon-calendar"></i> <span>Fecha: 02/15/2014</span></p>
+				<p><i class="glyphicon glyphicon-time"></i> <span>Teléfono: {{this.phone}}</span></p>
+				<p><i class="glyphicon glyphicon-tags"></i> <span>Tipo: {{this.type}}</span></p>
+				
+			</div>
+			
 		</div>
-		<div class="col-xs-12 col-sm-12 col-md-4 excerpet">
-			<h3><a href="#" title="">{{this.title}}</a></h3>
-			<p>{{this.description}}</p>
-            <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
-		</div>
-        <div class="col-xs-12 col-sm-12 col-md-3">
+
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs" style="text-align:center; padding-top: 7%;">
+            <button type="button" data-id="{{id}}" class="btn btn-primary restaurant-order" name="button">Ver platos</button>
+        </div>
+        <div class="hidden-lg hidden-md col-sm-12 col-xs-12" style="text-align:center;">
             <button type="button" data-id="{{id}}" class="btn btn-primary restaurant-order" name="button">Ver platos</button>
         </div>
 	</article>
