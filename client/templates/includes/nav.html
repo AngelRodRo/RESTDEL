@@ -1,12 +1,12 @@
 <template name="navigation">
-    <nav class="navbar navbar-default navbar-inverse" style="margin-bottom: 0px; background: #3c362f; border-color: #3c362f;">
+    <nav class="navbar" style="margin-bottom: 0px; background: #3c362f; border-color: #3c362f;">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse" style="margin-left:0px; margin-right:0px;">
+        <div style="margin-left:0px; margin-right:0px;">
             <div class="row" style="margin-left: 0px; margin-right: 0px;">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left: 0px; padding-right: 0px; text-align: left;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4" style="padding-left: 0px; padding-right: 0px; text-align: left; margin-bottom: 0px;">
                     <img src="/images/logo_rest_del2.png" width="160" height="100">
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 30px;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8" style="padding-left: 0px; padding-right: 0px; text-align: right; padding-top: 30px;">
                     {{#if isLogged  }}
                         <div class="dropdown">
                             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="background: #b32d00; color: white;">
@@ -17,32 +17,15 @@
                                 <li><a href="/logout" class="logout-btn">Cerrar sesión</a></li>
                             </ul>
                         </div>
+                        &nbsp;&nbsp;<a href="/miorden" style="color:white; cursor: pointer;"> <i class="glyphicon glyphicon-shopping-cart"></i>  {{nroOrders}}</a>
                     {{else}}
                         <button href="#" class="btn login-btn" style="background: #e60000; border-color: #e60000; color: white;">Iniciar sesión</button>
                         <a href="/registro" class="btn btn-primary" style="background: #990000; border-color: #990000;">Registro</a>
                     {{/if}}
-                    <p class="navbar-text navbar-right"><a href="/miorden" style="color:white;"> <i class="glyphicon glyphicon-shopping-cart"></i> {{nroOrders}}</a></p>
+
                 </div>
             </div>
         </div>
       </div>
     </nav>
 </template>
-
-<!-- <template name="navigation">
-    <nav class="navbar navbar-default navbar-inverse">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" style="margin-left:0px; margin-right:0px; text-align:right;">
-
-            {{#if isLogged  }}
-                <span style="color:white; font-weight:bold;">{{ name }}</span>
-                <button href="/logout" class="btn btn-primary navbar-btn logout-btn">Cerrar sesión</button>
-            {{else}}
-                <button href="#" class="btn btn-primary login-btn">Iniciar sesión</button>
-                <a href="/registro" class="btn btn-primary">Registro</a>
-            {{/if}}
-            <p class="navbar-text navbar-right"><a href="/miorden"> <i class="glyphicon glyphicon-shopping-cart"></i> {{nroOrders}}</a></p>
-        </div>
-      </div>
-    </nav>
-</template> -->
