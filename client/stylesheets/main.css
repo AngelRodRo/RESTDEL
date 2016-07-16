@@ -108,3 +108,21 @@ div.orders {
 div.orders:hover {
   background: #C47EC3;
 }
+
+@media (min-width: 768px) {
+  .texto-orden {
+    font-size: 26px;
+  }
+  h4.precio {
+    padding-bottom:5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .texto-orden {
+    font-size: 15px;
+  }
+  h4.precio {
+    padding-bottom: 10px;
+  }
+}

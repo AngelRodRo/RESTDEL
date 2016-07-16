@@ -7,19 +7,19 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th style="text-align:center">
+                    <th style="text-align:center; background: #990000; color:white;">
                         Foto
                     </th>
-                    <th style="text-align:center">
+                    <th style="text-align:center; background: #990000; color:white;">
                         Nombre
                     </th>
-                    <th style="text-align:center">
+                    <th style="text-align:center; background: #990000; color:white;">
                         Cantidad
                     </th>
-                    <th style="text-align:center">
+                    <th style="text-align:center; background: #990000; color:white;">
                         Precio
                     </th>
-                    <th style="text-align:center">
+                    <th style="text-align:center; background: #990000; color:white;">
                         Subtotal
                     </th>
                 </tr>
@@ -31,22 +31,22 @@
                         <img src="" alt="" />
                     </td>
                     <td style="text-align:center">
-                        <h2>
+                        <h2 class="texto-orden">
                             {{this.name}}
                         </h2>
                     </td >
                     <td style="text-align:center">
-                        <h2 class="quantity">
+                        <h2 class="quantity texto-orden">
                             {{this.quantity}} u
                         </h2>
                     </td>
                     <td style="text-align:center">
-                        <h2 class="price">
+                        <h2 class="price texto-orden">
                             S/. {{this.price}}
                         </h2>
                     </td>
                     <td style="text-align:center">
-                        <h2>
+                        <h2 class="texto-orden">
                             S/. {{subtotal}}
                         </h2>
                     </td>
@@ -54,12 +54,12 @@
                 {{/each}}
                 <tr>
                     <td colspan="4">
-                        <h2>
+                        <h2 class="texto-orden">
                             Total
                         </h2>
                     </td>
                     <td style="text-align:center">
-                        <h2 >
+                        <h2 class="texto-orden">
                             S/. {{total}}
                         </h2>
                     </td>
