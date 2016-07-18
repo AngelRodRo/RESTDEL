@@ -1,5 +1,4 @@
 
-
 Template.waiting.onCreated(function () {
     debugger;
     Orders.find({isCompleted:false}).observe({

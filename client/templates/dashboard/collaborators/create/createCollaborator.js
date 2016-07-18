@@ -1,13 +1,14 @@
 Template.createCollaborator.events({
     'click .create-collaborator'(event,template){
         event.preventDefault();
+        debugger;
         let profile = {
             name: template.find("[name='name']").value,
             lastname: template.find("[name='lastname']").value,
             phone: template.find("[name='phone']").value,
             address: template.find("[name='address']").value,
-            bufeteId: Meteor.user().profile.bufeteId,
-            type: 'collaborator'
+            restaurantId: Meteor.user().profile.restaurantId,
+            type: 'Collaborator'
         }
         let data = {
             email: template.find("[name='email']").value,
@@ -16,6 +17,6 @@ Template.createCollaborator.events({
         }
 
 
-        Meteor.users.insert(data)
+        Meteor.call('createUsers',data);
     }
 })

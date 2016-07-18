@@ -101,13 +101,10 @@
 div.orders {
   margin-left: 0px;
   margin-right: 0px;
-  background: #D687D5;
   font-size: 18px;
 }
 
-div.orders:hover {
-  background: #C47EC3;
-}
+
 
 @media (min-width: 768px) {
   .texto-orden {

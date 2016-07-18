@@ -1,6 +1,9 @@
 Template.adminListCollaborators.helpers({
     collaborators(){
-        return Meteor.users.find({'profile.type':'collaborator'});
+        return Meteor.users.find({'profile.type':'Collaborator'});
+    },
+    email(){
+        return this.emails[0].address
     }
 })
 
