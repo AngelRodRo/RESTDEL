@@ -1,0 +1,13 @@
+<template name="listOrdersDashboard">
+  <div class="row">
+      <h2 style="padding-left: 10px; font-family: Montserrat;">LISTA DE ÓRDENES
+        <i class="glyphicon glyphicon-cutlery"></i>
+      </h2>
+  </div>
+  <br>
+  <div class="row">
+      {{#each orders}}
+        {{> orderDashboard}}
+      {{/each}}
+  </div>
+</template>

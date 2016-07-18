@@ -101,6 +101,7 @@
 div.orders {
   margin-left: 0px;
   margin-right: 0px;
+
   background: #8C4BA3;
   font-size: 18px;
 }
@@ -108,6 +109,7 @@ div.orders {
 div.orders:hover {
   background: #7F2F9C;
 }
+
 
 @media (min-width: 768px) {
   .texto-orden {

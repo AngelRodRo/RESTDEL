@@ -37,16 +37,17 @@
                             {{this.profile.name}} {{this.profile.lastname}}
                         </td>
                         <td>
-                            {{this.celphone}}
+                            {{this.profile.phone}}
                         </td>
                         <td>
                             {{email}}
                         </td>
                         <td>
-                            {{this.address}}
+                            {{this.profile.address}}
                         </td>
                         <td>
-
+                            <a href="#" class="btn btn-primary">Editar</a>
+                            <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 {{/each}}

@@ -68,8 +68,23 @@ Meteor.methods({
             $set:{
                 'user.address':data.address,
                 'user.phone':data.phone,
-                'user.position':data.position
+                'user.position':data.position,
+                'isRequested':true
             }
         })
+    },
+    'orderDelete'(){
+        Orders.remove({'user.id':Meteor.userId()})
+    },
+    'updateLocationOrder'(id,latitude,longitude){
+        check(id,String)
+        check(latitude,Number)
+        check(longitude,Number)
+        Orders.update({_id:id},{
+            $set:{
+                latitude:latitude,
+                longitude:longitude
+            }
+        });
     }
 })

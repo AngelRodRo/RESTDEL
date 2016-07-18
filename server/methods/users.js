@@ -6,8 +6,6 @@ Meteor.methods({
         //     profile:Object
         // });
 
-        data.profile.type="User";
-
         Accounts.createUser(data);
     }
 })

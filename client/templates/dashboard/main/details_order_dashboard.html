@@ -1,0 +1,60 @@
+<template name="detailsOrderDashboard">
+    <div class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="background: #3e4855;">
+                <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+                <h4 class="modal-title" style="color: white;">Detalle de la orden</h4>
+              </div>
+              <div class="modal-body">
+                  <table class="table table-bordered">
+                      <thead>
+                          <th>
+                              Nombre del plato
+                          </th>
+                          <th>
+                              Cantidad
+                          </th>
+                          <th>
+                              Precio
+                          </th>
+                          <th>
+                              Subtotal
+                          </th>
+                      </thead>
+                      <tbody>
+                          {{#each dishes}}
+                          <tr>
+                              <td>
+                                  {{this.name}}
+                              </td>
+                              <td>
+                                  {{this.quantity}}
+                              </td>
+                              <td>
+                                  {{this.price}}
+                              </td>
+                              <td>
+                                 S/. {{subtotal}}
+                              </td>
+                          </tr>
+                          {{/each}}
+                           <tr>
+                               <td colspan="3">
+
+                               </td>
+                               <td>
+                                  S/. {{total}}
+                               </td>
+                           </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</template>

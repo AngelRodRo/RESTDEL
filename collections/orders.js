@@ -63,6 +63,10 @@ Schema.Orders = new SimpleSchema({
         decimal:true,
         optional:true
     },
+    isRequested:{
+        type:Boolean,
+        optional:true
+    },
     isAble:{
         type:Boolean,
         optional:true
