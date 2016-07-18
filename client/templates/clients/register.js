@@ -16,6 +16,7 @@ Template.registerClient.events({
             if(err) return toastr.error('No se pudo crear el usuario correctamente')
             toastr.success('Se creo su cuenta exitosamente');
             FlowRouter.go('/')
+            $("#registerModal").modal('hide')
         });
     }
 })

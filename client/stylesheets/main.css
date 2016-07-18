@@ -101,12 +101,12 @@
 div.orders {
   margin-left: 0px;
   margin-right: 0px;
-  background: #D687D5;
+  background: #8C4BA3;
   font-size: 18px;
 }
 
 div.orders:hover {
-  background: #C47EC3;
+  background: #7F2F9C;
 }
 
 @media (min-width: 768px) {
