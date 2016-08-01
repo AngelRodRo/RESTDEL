@@ -8,6 +8,7 @@ Template.loginClient.events({
             if(err) return console.log(err)
             FlowRouter.go('/')
             $("#loginModal").modal('hide')
+            
         });
     }
 })
