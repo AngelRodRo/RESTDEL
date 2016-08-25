@@ -35,6 +35,10 @@ Schema.Orders = new SimpleSchema({
     user:{
         type:Object
     },
+    userId:{
+        type:String,
+        optional:true
+    },
     'user.id':{
         type:String
     },
@@ -77,10 +81,12 @@ Schema.Orders = new SimpleSchema({
     },
     latitude:{
         type:Number,
+        decimal:true,
         optional:true
     },
     longitude:{
         type:Number,
+        decimal:true,
         optional:true
     },
     mandatedId:{

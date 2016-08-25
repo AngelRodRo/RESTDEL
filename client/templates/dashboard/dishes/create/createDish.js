@@ -11,6 +11,7 @@ Template.createDish.events({
         Dishes.insert(data,function (err) {
             if(err) return toastr.error('No se pudo registrar correctamente el plato de comida');
             toastr.success('Se registro correctamente el plato de comida')
+            Modal.hide('createDish')
         })
     }
 })

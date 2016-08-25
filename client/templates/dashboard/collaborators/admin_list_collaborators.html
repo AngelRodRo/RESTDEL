@@ -8,16 +8,10 @@
             <thead>
                 <tr>
                     <th>
-                        DNI
-                    </th>
-                    <th>
                         Nombres y apellidos
                     </th>
                     <th>
                         Telefonos
-                    </th>
-                    <th>
-                        Correo
                     </th>
                     <th>
                         Direccion
@@ -31,23 +25,17 @@
                 {{#each collaborators}}
                     <tr>
                         <td>
-                            {{this.profile.dni}}
-                        </td>
-                        <td>
                             {{this.profile.name}} {{this.profile.lastname}}
                         </td>
                         <td>
                             {{this.profile.phone}}
                         </td>
                         <td>
-                            {{email}}
-                        </td>
-                        <td>
                             {{this.profile.address}}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-primary">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
+                            <a href="#" class="btn btn-primary btn-edit">Editar</a>
+                            <a href="#" class="btn btn-danger btn-delete">Eliminar</a>
                         </td>
                     </tr>
                 {{/each}}

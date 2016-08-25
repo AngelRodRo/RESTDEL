@@ -26,6 +26,9 @@ Template.navigation.helpers({
         return Meteor.user().profile.name + " " + Meteor.user().profile.lastname
     },
     nroOrders(){
-        return Orders.find({isCompleted:false}).fetch()[0].dishes.length;
+        return Orders.find({'user.id':Meteor.userId(),isCompleted:false}).fetch()[0].dishes.length;
+    },
+    sending(){
+        return Orders.findOne({'user.id':Meteor.userId()}).mandatedId? true:false;
     }
 })

@@ -7,5 +7,8 @@ Meteor.methods({
         // });
 
         Accounts.createUser(data);
+    },
+    'deleteUsers'(id){
+        Meteor.users.remove({_id:id});
     }
 })

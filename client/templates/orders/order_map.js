@@ -55,6 +55,32 @@ Template.orderMap.events({
             })
 
         });
+    },
+    'click .accept-order'(event,template){
+        swal({
+          title: 'Se recibio el pedido correctamente?',
+          text: 'Ya no podra realizar cambios posteriores',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#dd6b55',
+          cancelButtonColor: '#d44',
+          confirmButtonText: 'Aceptar',
+          cancelButtonText: 'Cancelar',
+          closeOnConfirm: false
+        }, function() {
+
+            Meteor.call('orderDelete',function (err) {
+                if(err) return toastr.error('Hubo un error al momento cancelar la orden')
+                swal(
+                  'Su orden se ha acepto correctamente',
+                  'Gracias por utilizar el servicio',
+                  'success'
+                );
+
+                FlowRouter.go('/');
+            })
+
+        });
     }
 })
 

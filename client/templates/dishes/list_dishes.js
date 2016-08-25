@@ -7,6 +7,6 @@ Template.listDishes.onCreated(function () {
 
 Template.listDishes.helpers({
     dishes(){
-        return Dishes.find();
+        return Dishes.find({restaurantId:FlowRouter.getParam('restaurantId')});
     }
 })

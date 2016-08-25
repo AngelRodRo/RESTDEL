@@ -10,6 +10,7 @@ formatDate = function (date) {
 Meteor.methods({
     'addToOrder'(data){
         check(data,Object);
+        console.log(data);
         if(this.userId){
             if(Meteor.user().profile.type!="Restaurant"){
                 console.log(data.dishId);
@@ -39,20 +40,20 @@ Meteor.methods({
                     isAble:true,
                     dishes:[dish],
                     restaurant: restaurant,
-                    user: user
+                    user: user,
+                    userId:user.id
                 }
                 // console.log(order);
                 let ordersQuantity = Orders.find({'user.id':this.userId,isAble:true}).count();
-                if(ordersQuantity==1)
-                    return Orders.update({'user.id':this.userId,isAble:true},{$set:{
-                        code:code,
-                        isCompleted:false,
-                        isAble:true,
+                if(ordersQuantity==1){
+                    console.log(dish);
+                    console.log('Entro aqui');
+                    return Orders.update({'user.id':this.userId,isAble:true},{
                         "$push": {
                             "dishes": dish
-                        },
-                        user:user
-                    }});
+                        }
+                    });
+                }
                 return Orders.insert(order)
             }
 
@@ -63,7 +64,7 @@ Meteor.methods({
     },
     'detailsOrder'(data){
         check(data,Object);
-
+        console.log(data);
         Orders.update({'user.id':this.userId,isAble:true},{
             $set:{
                 'user.address':data.address,
@@ -80,6 +81,7 @@ Meteor.methods({
         check(id,String)
         check(latitude,Number)
         check(longitude,Number)
+        console.log('Entro aqui');
         Orders.update({_id:id},{
             $set:{
                 latitude:latitude,

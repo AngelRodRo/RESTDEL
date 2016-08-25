@@ -18,5 +18,7 @@ Template.createCollaborator.events({
 
 
         Meteor.call('createUsers',data);
+
+        Modal.hide('createCollaborator');
     }
 })

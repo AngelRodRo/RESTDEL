@@ -3,13 +3,20 @@
       <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
               <h2>{{this.code}}</h2>
-              <h3 style="color: #828282;" >{{this.user.name}}</h3>
+              <h3 style="color: #828282;" >Cliente: {{this.user.name}}</h3>
               <br>
               <h4>12/05/2014</h4>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
               {{#if state}}
-                <h2>Enviando..</h2>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <h2>Enviando..</h2>
+                      </div>
+                      <div class="col-md-12">
+                          Colaborador: {{collaborator}}
+                      </div>
+                  </div>
               {{else}}
                 <h2>En espera ..</h2>
               {{/if}}
@@ -18,7 +25,7 @@
             <h2 style="color: white;"></h2>
             <h4 class="precio" style="color: white;">{{total}}</h4>
             <button type="button" name="button" class="btn btn-primary show-details" style="width:100%;margin:5px 0px">Detalles</button>
-            <button type="button" name="button" class="btn btn-success asign-collaborator" data-toggle="modal" data-target="#asignar" style="width:100%; margin:5px 0px">Asignar</button>
+            <button type="button" name="button" disabled="{{asignado}}"  class="btn btn-success asign-collaborator" data-toggle="modal" data-target="#asignar" style="width:100%; margin:5px 0px">Asignar</button>
           </div>
       </div>
     </div>

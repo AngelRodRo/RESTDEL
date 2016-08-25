@@ -12,5 +12,7 @@ Template.asignCollaborator.events({
                 mandatedId: template.find("[name='collaborator']").value
             }
         })
+
+        Modal.hide('asignCollaborator');
     }
 })
