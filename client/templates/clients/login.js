@@ -7,6 +7,7 @@ Template.loginClient.events({
         Meteor.loginWithPassword(email,password,function (err) {
             if(err) return console.log(err)
             $("#loginModal").modal('hide')
+            
         });
     }
 })

@@ -2,6 +2,9 @@ Template.navigation.events({
     'click .login-btn'(){
         Modal.show('loginClient');
     },
+    'click .register-btn'(){
+        Modal.show('registerClient');
+    },
     'click .logout-btn'(){
         Meteor.logout();
     }
